@@ -11,7 +11,7 @@ import org.springframework.stereotype.Service;
 @Service
 @RequiredArgsConstructor
 public class UserService {
-    @KafkaListener(topics = "kafka-spring-producer", containerFactory = "userFactory")
+    @KafkaListener(topics = "kafka-spring-producer", containerFactory = "userKafkaListenerFactory")
     public void listenHeaders(@Payload User user,
                               @Header(KafkaHeaders.RECEIVED_PARTITION_ID) int partition) {
         System.out.println("Received Message :" + user + partition);

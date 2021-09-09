@@ -7,9 +7,6 @@ import org.springframework.stereotype.Component;
 
 import java.io.Serializable;
 
-@AllArgsConstructor
-@NoArgsConstructor
-@Component
 @Data
 public class User {
     private String id;
